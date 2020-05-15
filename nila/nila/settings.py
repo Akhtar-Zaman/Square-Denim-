@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'sdl'
+    'sdl',
+    'import_export'
 ]
 
 MIDDLEWARE = [
@@ -76,11 +77,8 @@ WSGI_APPLICATION = 'nila.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'square_denim',
-        'USER': 'postgres',
-        'PASSWORD': 'ayman',
-        'HOST': 'localhost'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
